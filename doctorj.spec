@@ -1,11 +1,11 @@
 %define gcj_support 1
 %bcond_with tests
 
-Summary:	Compares javadoc comments against code
 Name:		doctorj
 Version:	5.1.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		0
+Summary:	Compares javadoc comments against code
 License:	LGPL
 Group:		Development/Java
 URL:		http://www.incava.org/projects/java/doctorj/index.html
@@ -16,12 +16,12 @@ Requires(postun): java-gcj-compat
 BuildRequires:	java-gcj-compat-devel
 %else
 BuildArch: 	noarch
+BuildRequires:	java-devel
 %endif
 BuildRequires:	ant
 %if %with tests
 BuildRequires:	ant-junit
 %endif
-BuildRequires:	java-devel >= 0:1.4.2
 BuildRequires:	jpackage-utils
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -89,15 +89,6 @@ export OPT_JAR_LIST="%{__cat} %{_sysconfdir}/ant.d/junit"
 %{clean_gcjdb}
 %endif
 
-%post javadoc
-%{__rm} -f %{_javadocdir}/%{name}
-%{__ln_s} %{name}-%{version} %{_javadocdir}/%{name}
-
-%postun javadoc
-if [ $1 -eq 0 ]; then
-  %{__rm} -f %{_javadocdir}/%{name}
-fi
-
 %files
 %defattr(0644,root,root,0755)
 %doc AUTHORS ChangeLog COPYING INSTALL NEWS README
@@ -114,4 +105,4 @@ fi
 %files javadoc
 %defattr(0644,root,root,0755)
 %doc %{_javadocdir}/%{name}-%{version}
-%ghost %doc %{_javadocdir}/%{name}
+%doc %{_javadocdir}/%{name}
