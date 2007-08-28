@@ -23,6 +23,7 @@ BuildRequires:	ant
 BuildRequires:	ant-junit
 %endif
 BuildRequires:	jpackage-utils
+BuildRequires:  xmlto
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
