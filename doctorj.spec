@@ -3,7 +3,7 @@
 
 Name:		doctorj
 Version:	5.1.2
-Release:	%mkrel 2
+Release:	%mkrel 3
 Epoch:		0
 Summary:	Compares javadoc comments against code
 License:	LGPL
@@ -11,8 +11,6 @@ Group:		Development/Java
 URL:		http://www.incava.org/projects/java/doctorj/index.html
 Source0:	http://superb-east.dl.sourceforge.net/sourceforge/doctorj/doctorj-%{version}.tar.gz
 %if %{gcj_support}
-Requires(post):	java-gcj-compat
-Requires(postun): java-gcj-compat
 BuildRequires:	java-gcj-compat-devel
 %else
 BuildArch: 	noarch
