@@ -3,7 +3,7 @@
 
 Name:		doctorj
 Version:	5.1.2
-Release:	%mkrel 3
+Release:	%mkrel 4
 Epoch:		0
 Summary:	Compares javadoc comments against code
 License:	LGPL
@@ -20,7 +20,7 @@ BuildRequires:	ant
 %if %with tests
 BuildRequires:	ant-junit
 %endif
-BuildRequires:	jpackage-utils
+BuildRequires:	java-rpmbuild
 BuildRequires:  xmlto
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
