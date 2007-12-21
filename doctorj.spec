@@ -22,6 +22,7 @@ BuildRequires:	ant-junit
 %endif
 BuildRequires:	java-rpmbuild
 BuildRequires:  xmlto
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 Beyond the level of what Javadoc does, DoctorJ compares
