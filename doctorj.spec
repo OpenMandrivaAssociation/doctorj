@@ -3,7 +3,7 @@
 
 Name:		doctorj
 Version:	5.1.2
-Release:	%mkrel 4
+Release:	%mkrel 6
 Epoch:		0
 Summary:	Compares javadoc comments against code
 License:	LGPL
