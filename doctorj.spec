@@ -8,7 +8,7 @@ Epoch:		0
 Summary:	Compares javadoc comments against code
 License:	LGPL
 Group:		Development/Java
-URL:		http://www.incava.org/projects/java/doctorj/index.html
+URL:		https://www.incava.org/projects/java/doctorj/index.html
 Source0:	http://superb-east.dl.sourceforge.net/sourceforge/doctorj/doctorj-%{version}.tar.gz
 %if %{gcj_support}
 BuildRequires:	java-gcj-compat-devel
